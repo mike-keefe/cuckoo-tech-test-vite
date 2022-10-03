@@ -1,0 +1,15 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

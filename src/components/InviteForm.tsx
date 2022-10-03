@@ -10,7 +10,13 @@ const InviteForm = () => {
   console.log({ fullName, email, confirmEmail });
 
   return (
-    <form onSubmit={() => {}}>
+    <form
+      onSubmit={() => {
+        // 1 - validate input
+        // 2 - make request
+        // 3 - update modal with error or success text
+      }}
+    >
       <label>Full Name</label>
       <input
         type="text"

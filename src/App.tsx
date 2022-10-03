@@ -7,29 +7,42 @@ import PageHeader from "./components/Header";
 import CenteredWrapper from "./components/CenteredWrapper";
 import CenteredContent from "./components/CenteredContent";
 import Button from "./components/Button";
+import Modal from "./components/Modal";
+import InviteForm from "./components/InviteForm";
 
 function App() {
   return (
-    <PageContainer>
-      <PageHeader>
-        <CenteredWrapper>
-          <h1>Otter</h1>
-        </CenteredWrapper>
-      </PageHeader>
-      <PageContent>
-        <CenteredContent>
-          <p>The new way to happiness is through Otter!</p>
-          <p>Be the first to know when we launch</p>
-          <Button onClick={() => {}}>Request an invite</Button>
-        </CenteredContent>
-      </PageContent>
-      <PageFooter>
-        <CenteredWrapper>
-          <p>Made with ❤️ in Catford</p>
-          <p>Copyright 2020 Otter Limited</p>
-        </CenteredWrapper>
-      </PageFooter>
-    </PageContainer>
+    <>
+      <Modal>
+        <InviteForm />
+      </Modal>
+      <PageContainer>
+        <PageHeader>
+          <CenteredWrapper>
+            <h1>Otter</h1>
+          </CenteredWrapper>
+        </PageHeader>
+        <PageContent>
+          <CenteredContent>
+            <p>The new way to happiness is through Otter!</p>
+            <p>Be the first to know when we launch</p>
+            <Button
+              onClick={() => {
+                // Button Handling Code
+              }}
+            >
+              Request an invite
+            </Button>
+          </CenteredContent>
+        </PageContent>
+        <PageFooter>
+          <CenteredWrapper>
+            <p>Made with ❤️ in Catford</p>
+            <p>Copyright 2020 Otter Limited</p>
+          </CenteredWrapper>
+        </PageFooter>
+      </PageContainer>
+    </>
   );
 }
 

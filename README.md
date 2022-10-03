@@ -2,14 +2,14 @@
 
 Built using Vite + React + TS + Styled Components
 
-# Build
+## Build
 
 WIP
 
-# Run
+## Run
 
 WIP
 
-# Test
+## Test
 
 WIP

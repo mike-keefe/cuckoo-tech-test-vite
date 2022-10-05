@@ -1,42 +1,46 @@
 import styled from "styled-components";
 import Button from "./Button";
 import { useState } from "react";
+import { useForm } from "../hooks/useForm";
 
 const InviteForm = () => {
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [confirmEmail, setConfirmEmail] = useState("");
+  const initialState = {
+    fullName: "",
+    email: "",
+    confirmEmail: "",
+  };
 
-  console.log({ fullName, email, confirmEmail });
+  const { onChange, onSubmit, values } = useForm(
+    signupUserCallback,
+    initialState
+  );
+
+  async function signupUserCallback() {
+    // validate and request
+  }
 
   return (
-    <form
-      onSubmit={() => {
-        // 1 - validate input
-        // 2 - make request
-        // 3 - update modal with error or success text
-      }}
-    >
+    <form onSubmit={onSubmit}>
       <label>Full Name</label>
       <input
+        placeholder="Full Name"
         type="text"
         name="fullName"
-        value={fullName}
-        onChange={(e) => setFullName(e.target.value)}
+        onChange={onChange}
       />
       <label>Email</label>
       <input
+        placeholder="Email"
         type="email"
         name="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        onChange={onChange}
       />
       <label>Confirm Email</label>
       <input
+        placeholder="Confirm Email"
         type="email"
         name="confirmEmail"
-        value={confirmEmail}
-        onChange={(e) => setConfirmEmail(e.target.value)}
+        onChange={onChange}
       />
       <Button>Sign me up!</Button>
     </form>
